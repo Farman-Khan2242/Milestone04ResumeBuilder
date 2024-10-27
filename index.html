@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Resume</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1 id="dynamicHeading">Dynamic Resume</h1>
+    <form id="resumeForm">
+        <fieldset id="personalField">
+            <legend>Personal Details</legend>
+            <label for="fname">Name:</label>
+            <input type="text" name="fname" id="fname" required>
+
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" required>
+
+            <label for="phone">Phone No:</label>
+            <input type="tel" name="phone" id="phone" required>
+
+            <label for="profile">Profile:</label>
+            <input type="file" id="profile" name="profilePicture" required>
+        </fieldset>
+
+        <fieldset class="field">
+            <label for="skills">Skills</label>
+            <textarea name="skills" id="skills"></textarea>
+        </fieldset>
+        <fieldset class="field">
+            <label for="education">Education</label>
+            <textarea name="education" id="education"></textarea>
+        </fieldset>
+        <fieldset class="field">
+            <label for="experiance">Experience</label>
+            <textarea name="experiance" id="experiance"></textarea>
+        </fieldset>
+        <button id="btn" type="submit">Generate Resume</button>
+    </form>
+
+    <div class="resumeOutput" id="resumePut" style="display: none;">
+        <header>
+            <div class="imgDiv" id="imgdiv"></div>
+            <h1 id="name"></h1>
+            <div class="contact" id="contactBox"></div>
+        </header>
+        <section>
+            <button id="btn01" class="buttons">Hide Education</button>
+            <div id="eduList" class="hidden"></div>
+        </section>
+        <section>
+            <button id="btn02" class="buttons">Hide Skills</button>
+            <div id="skillsList" class="hidden"></div>
+        </section>
+        <section>
+            <button id="btn03" class="buttons">Hide Experience</button>
+            <div id="expList" class="hidden"></div>
+        </section>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
